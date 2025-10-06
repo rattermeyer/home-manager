@@ -46,7 +46,7 @@ home.packages = [
 #   echo "Hello, ${config.home.username}!"
 # '')
 
-# Shell 
+# Shell
 pkgs.oh-my-zsh
 pkgs.ripgrep
 pkgs.lsd
@@ -63,6 +63,7 @@ pkgs.httpie
 pkgs.tmux
 # tmux alternative
 pkgs.zellij
+pkgs.terminator
 pkgs.zsh-powerlevel10k
 pkgs.meslo-lgs-nf
 pkgs.fzf
@@ -85,6 +86,7 @@ pkgs.btop
 # File Manager
 pkgs.ranger
 pkgs.yazi
+pkgs.mc
 # Tmux alternative
 pkgs.zellij
 # Git related stuff
@@ -93,6 +95,7 @@ pkgs.pre-commit
 pkgs.git-bug
 pkgs.git-lfs
 pkgs.git-ignore
+pkgs.gitleaks
 # C++ related stuff
 pkgs.conan
 pkgs.ninja
@@ -127,7 +130,7 @@ pkgs.docker-credential-helpers
 # Terraform
 pkgs.opentofu
 # linecount
-pkgs.loccount 
+pkgs.loccount
 
 ];
 
@@ -246,7 +249,7 @@ function y() {
   export PATH=$VOLTA_HOME/bin:$PATH
   export KREW_ROOT=$HOME/.krew
   export PATH=$KREW_ROOT/bin:$PATH
-  
+
   ##THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
   #export SDKMAN_DIR="$HOME/.sdkman"
   #[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
@@ -255,7 +258,7 @@ function y() {
 programs.zsh.oh-my-zsh = {
   enable = true;
   custom = "$HOME/.oh-my-zsh/custom/";
-  plugins = [ 
+  plugins = [
     "git"
     "sudo"
     "dotenv"
@@ -270,9 +273,9 @@ programs.neovim = {
   defaultEditor = true;
   vimAlias = true;
 };
-programs.neovim.plugins = [ 
+programs.neovim.plugins = [
   pkgs.vimPlugins.nvim-tree-lua
-  pkgs.vimPlugins.nvim-surround 
+  pkgs.vimPlugins.nvim-surround
 ] ;
 programs.ripgrep.enable = true ;
 programs.fd = {
