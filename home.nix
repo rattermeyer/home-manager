@@ -8,6 +8,7 @@
   imports = [
     modules/zsh.nix
     modules/neovim.nix
+    modules/git.nix
   ];
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
@@ -82,12 +83,6 @@
     pkgs.yazi
     # Tmux alternative
     pkgs.zellij
-    # Git related stuff
-    pkgs.lazygit
-    pkgs.pre-commit
-    pkgs.git-bug
-    pkgs.git-lfs
-    pkgs.git-ignore
     # C++ related stuff
     pkgs.conan
     pkgs.ninja
@@ -248,21 +243,6 @@ pkgs.loccount
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
-  programs.git = {
-    enable = true;
-    userName = "Richard Attermeyer";
-    userEmail = "richarda@miltenyibiotec.de";
-    ignores = [
-      "*~"
-      "*.swp"
-      ".env"
-    ];
-    delta.enable = true;
-    lfs.enable = true;
-    extraConfig = {
-      init.defaultBranch = "main";
-    };
-  };
   programs.ripgrep.enable = true;
   programs.fd = {
     enable = true;
