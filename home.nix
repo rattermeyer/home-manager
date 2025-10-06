@@ -77,6 +77,7 @@ pkgs.nerd-fonts.meslo-lg
 pkgs.k9s
 pkgs.lazydocker
 pkgs.zoxide
+pkgs.pay-respects
 pkgs.mkcert
 pkgs.podman-tui
 # Postgres CLI and backup
@@ -244,6 +245,7 @@ function y() {
   POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
   export PATH=$PATH:~/.rd/bin
   #eval "$(zoxide init zsh)"
+  eval "$(pay-respects zsh --alias)"
   export VOLTA_HOME=$HOME/.volta
   export VOLTA_FEATURE_PNPM=1
   export PATH=$VOLTA_HOME/bin:$PATH
