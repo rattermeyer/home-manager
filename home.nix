@@ -4,18 +4,10 @@
   lib,
   ...
 }:
-let
-  nixvim = import (
-    builtins.fetchGit {
-      url = "https://github.com/nix-community/nixvim";
-      ref = "main";
-    }
-  );
-in
 {
   imports = [
-    nixvim.homeModules.nixvim
     modules/zsh.nix
+    modules/neovim.nix
   ];
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
@@ -71,8 +63,6 @@ in
     pkgs.zsh-powerlevel10k
     pkgs.meslo-lgs-nf
     pkgs.fzf
-    pkgs.neovim-unwrapped
-    pkgs.vimPlugins.lazy-nvim
     pkgs.devbox
     pkgs.nerd-fonts.fira-code
     pkgs.nerd-fonts.fira-mono
@@ -258,23 +248,6 @@ pkgs.loccount
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
-  programs.nixvim = {
-    enable = true;
-    opts = {
-      number = true;
-      shiftwidth = 2;
-      completeopt = [
-        "menu"
-        "menuone"
-        "noselect"
-      ];
-      termguicolors = true;
-    };
-    plugins.lightline.enable = true;
-    plugins.nvim-surround.enable = true;
-    plugins.airline.enable = true;
-
-  };
   programs.git = {
     enable = true;
     userName = "Richard Attermeyer";
@@ -290,15 +263,6 @@ pkgs.loccount
       init.defaultBranch = "main";
     };
   };
-  programs.neovim = {
-    enable = true;
-    defaultEditor = true;
-    vimAlias = true;
-  };
-  programs.neovim.plugins = [
-    pkgs.vimPlugins.nvim-tree-lua
-    pkgs.vimPlugins.nvim-surround
-  ];
   programs.ripgrep.enable = true;
   programs.fd = {
     enable = true;
