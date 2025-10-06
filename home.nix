@@ -61,6 +61,7 @@
     pkgs.tmux
     # tmux alternative
     pkgs.zellij
+    pkgs.terminator
     pkgs.zsh-powerlevel10k
     pkgs.meslo-lgs-nf
     pkgs.fzf
