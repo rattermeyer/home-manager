@@ -15,7 +15,7 @@
     pkgs.gitui
     pkgs.git-standup
     pkgs.git-secrets
-    pkgs.commitizen-go
+    pkgs.better-commits
   ];
   programs.git = {
     enable = true;
