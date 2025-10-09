@@ -79,7 +79,8 @@
       "zoxide"
     ];
 
-    theme = "robbyrussell";
+#    theme = "robbyrussell";
+    theme = "powerlevel10k/powerlevel10k";
   };
 
   home.shell.enableZshIntegration = true;
