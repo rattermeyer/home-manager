@@ -8,8 +8,8 @@
 {
   home.packages = [
     pkgs.oh-my-zsh
-    pkgs.zsh-autosuggestions
   ];
+
 
   programs.zsh = {
     enable = true;

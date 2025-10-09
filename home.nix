@@ -74,6 +74,7 @@
     pkgs.lazydocker
     pkgs.zoxide
     pkgs.mkcert
+    pkgs.podman
     pkgs.podman-tui
     # Postgres CLI and backup
     pkgs.pgcli
