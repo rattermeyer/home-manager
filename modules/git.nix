@@ -12,6 +12,10 @@
     pkgs.git-bug
     pkgs.git-lfs
     pkgs.git-ignore
+    pkgs.gitui
+    pkgs.git-standup
+    pkgs.git-secrets
+    pkgs.commitizen-go
   ];
   programs.git = {
     enable = true;

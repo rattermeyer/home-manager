@@ -59,6 +59,7 @@
     pkgs.tldr
     pkgs.httpie
     pkgs.tmux
+    pkgs.procs
     # tmux alternative
     pkgs.zellij
     pkgs.terminator
@@ -74,8 +75,7 @@
     pkgs.lazydocker
     pkgs.zoxide
     pkgs.mkcert
-    pkgs.podman
-    pkgs.podman-tui
+    pkgs.httm
     # Postgres CLI and backup
     pkgs.pgcli
     pkgs.backrest
@@ -109,6 +109,9 @@
     pkgs.hadolint
     pkgs.shellcheck
     # K8s and docker
+    pkgs.dive
+    pkgs.podman
+    pkgs.podman-tui
     pkgs.kind
     pkgs.kubectl
     pkgs.kubernetes-helm
