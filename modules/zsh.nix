@@ -8,6 +8,7 @@
 {
   home.packages = [
     pkgs.oh-my-zsh
+    pkgs.zsh-autosuggestions
   ];
 
 
@@ -51,6 +52,12 @@
       	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
       	rm -f -- "$tmp"
       }
+
+      alias f='eval $(_PR_LAST_COMMAND="$(fc -ln -1)" _PR_ALIAS="`alias`" _PR_SHELL="zsh" "pay-respects")'
+command_not_found_handler() {
+      eval $(_PR_LAST_COMMAND="$@" _PR_SHELL="zsh" _PR_ALIAS="`alias`" _PR_MODE="cnf" "pay-respects")
+      }
+
 
         source ~/.p10k.zsh
         POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true

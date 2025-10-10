@@ -60,6 +60,8 @@
     pkgs.httpie
     pkgs.tmux
     pkgs.procs
+    pkgs.pay-respects
+    pkgs.fx
     # tmux alternative
     pkgs.zellij
     pkgs.terminator
@@ -87,10 +89,12 @@
     pkgs.zellij
     # C++ related stuff
     pkgs.conan
+    pkgs.vcpkg-tool
     pkgs.ninja
     pkgs.cmake
     pkgs.doxygen
     pkgs.llvmPackages_20.clang-tools
+    pkgs.cppcheck
     pkgs.valgrind
     # Python
     pkgs.python313
