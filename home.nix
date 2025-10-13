@@ -80,6 +80,7 @@
     pkgs.httm
     # Postgres CLI and backup
     pkgs.pgcli
+    pkgs.restic
     pkgs.backrest
     pkgs.btop
     # File Manager
@@ -103,6 +104,8 @@
     pkgs.python313Packages.pip
     pkgs.python313Packages.pygments
     # Node / Typescript
+    pkgs.pnpm
+    pkgs.nodejs_22
     pkgs.volta
     # Rust
     pkgs.rustc

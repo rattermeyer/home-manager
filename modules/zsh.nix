@@ -57,6 +57,10 @@
 command_not_found_handler() {
       eval $(_PR_LAST_COMMAND="$@" _PR_SHELL="zsh" _PR_ALIAS="`alias`" _PR_MODE="cnf" "pay-respects")
       }
+      
+      export LC_ALL=en_US.UTF-8
+      export LANG=en_US.UTF-8
+      export LANGUAGE=en_US.UTF-8
 
 
         source ~/.p10k.zsh
