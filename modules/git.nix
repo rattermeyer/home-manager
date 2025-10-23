@@ -16,11 +16,12 @@
     pkgs.git-standup
     pkgs.git-secrets
     pkgs.better-commits
+    pkgs.git-quick-stats
   ];
   programs.git = {
     enable = true;
     userName = "Richard Attermeyer";
-    userEmail = "richard.attermeyer@gmail.com";
+    userEmail = "richarda@miltenyibiotec.de";
     ignores = [
       "*~"
       "*.swp"
@@ -30,6 +31,8 @@
     lfs.enable = true;
     extraConfig = {
       init.defaultBranch = "main";
+      pull.rebase = true;
+
     };
   };
 }

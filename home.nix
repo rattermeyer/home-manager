@@ -78,6 +78,7 @@
     pkgs.zoxide
     pkgs.mkcert
     pkgs.httm
+    pkgs.trivy
     # Postgres CLI and backup
     pkgs.pgcli
     pkgs.restic
@@ -90,7 +91,7 @@
     pkgs.zellij
     # C++ related stuff
     pkgs.conan
-    pkgs.vcpkg-tool
+    pkgs.vcpkg
     pkgs.ninja
     pkgs.cmake
     pkgs.doxygen
@@ -119,6 +120,7 @@
     pkgs.dive
     pkgs.podman
     pkgs.podman-tui
+    pkgs.podman-compose
     pkgs.kind
     pkgs.kubectl
     pkgs.kubernetes-helm
@@ -166,6 +168,8 @@
   home.sessionVariables = {
     # EDITOR = "emacs";
   };
+  
+  fonts.fontconfig.enable = true;
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;

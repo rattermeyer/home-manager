@@ -72,6 +72,8 @@ command_not_found_handler() {
         export PATH=$VOLTA_HOME/bin:$PATH
         export KREW_ROOT=$HOME/.krew
         export PATH=$KREW_ROOT/bin:$PATH
+
+        eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
         
         ##THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
         #export SDKMAN_DIR="$HOME/.sdkman"
@@ -83,6 +85,7 @@ command_not_found_handler() {
     custom = "$HOME/.oh-my-zsh/custom/";
     plugins = [
       "git"
+      "gitignore"
       "sudo"
       "dotenv"
       "gitignore"
