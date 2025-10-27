@@ -29,6 +29,7 @@ in
   programs.neovim.plugins = [
     pkgs.vimPlugins.nvim-tree-lua
     pkgs.vimPlugins.nvim-surround
+    pkgs.vimPlugins.neo-tree-nvim
   ];
   programs.nixvim = {
     enable = true;
@@ -45,6 +46,8 @@ in
     plugins.lightline.enable = true;
     plugins.nvim-surround.enable = true;
     plugins.airline.enable = true;
+    plugins.neo-tree.enable = true;
+    plugins.yazi.enable = true;
 
   };
 }
