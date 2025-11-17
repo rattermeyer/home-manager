@@ -73,7 +73,7 @@ command_not_found_handler() {
         export KREW_ROOT=$HOME/.krew
         export PATH=$KREW_ROOT/bin:$PATH
 
-        eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+        eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
         
         ##THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
         #export SDKMAN_DIR="$HOME/.sdkman"

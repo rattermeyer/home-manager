@@ -62,6 +62,7 @@
     pkgs.procs
     pkgs.pay-respects
     pkgs.fx
+    pkgs.vale
     # tmux alternative
     pkgs.zellij
     pkgs.terminator
@@ -89,6 +90,8 @@
     pkgs.yazi
     # Tmux alternative
     pkgs.zellij
+    # Java related stuff
+    pkgs.gradle
     # C++ related stuff
     pkgs.conan
     pkgs.vcpkg
