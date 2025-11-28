@@ -93,14 +93,18 @@
     # Java related stuff
     pkgs.gradle
     # C++ related stuff
-    pkgs.conan
-    pkgs.vcpkg
-    pkgs.ninja
-    pkgs.cmake
-    pkgs.doxygen
-    pkgs.llvmPackages_20.clang-tools
-    pkgs.cppcheck
-    pkgs.valgrind
+    #pkgs.conan
+    #pkgs.vcpkg
+    #pkgs.ninja
+    #pkgs.cmake
+    #pkgs.mesa
+    #pkgs.mesa-gl-headers
+    #pkgs.libGL
+    #pkgs.libGLU
+    #pkgs.doxygen
+    #pkgs.llvmPackages_20.clang-tools
+    #pkgs.cppcheck
+    #pkgs.valgrind
     # Python
     pkgs.python313
     pkgs.python313Packages.jinja2

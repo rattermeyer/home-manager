@@ -14,6 +14,7 @@
 
   programs.zsh = {
     enable = true;
+    autosuggestion.enable = true;
     shellAliases = {
       ls = "lsd";
       l = "ls -l";
@@ -61,7 +62,6 @@ command_not_found_handler() {
       export LC_ALL=en_US.UTF-8
       export LANG=en_US.UTF-8
       export LANGUAGE=en_US.UTF-8
-
 
         source ~/.p10k.zsh
         POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
