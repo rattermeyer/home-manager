@@ -19,17 +19,19 @@
   ];
   programs.git = {
     enable = true;
-    userName = "Richard Attermeyer";
-    userEmail = "richard.attermeyer@gmail.com";
+    settings = {
+      user.name = "Richard Attermeyer";
+      user.email = "richard.attermeyer@gmail.com";
+      init.defaultBranch = "main";
+    };
     ignores = [
       "*~"
       "*.swp"
       ".env"
     ];
-    delta.enable = true;
     lfs.enable = true;
-    extraConfig = {
-      init.defaultBranch = "main";
-    };
+  };
+  programs.delta = {
+    enable = true;
   };
 }
