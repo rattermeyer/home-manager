@@ -14,6 +14,13 @@
 
   programs.zsh = {
     enable = true;
+    autosuggestion = {
+      enable = true;
+      strategy = [
+        "history"
+	"completion"
+      ];
+    };
     shellAliases = {
       ls = "lsd";
       l = "ls -l";
@@ -72,6 +79,7 @@ command_not_found_handler() {
         export PATH=$VOLTA_HOME/bin:$PATH
         export KREW_ROOT=$HOME/.krew
         export PATH=$KREW_ROOT/bin:$PATH
+	eval "$(starship init zsh)"
         
         ##THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
         #export SDKMAN_DIR="$HOME/.sdkman"
@@ -91,7 +99,7 @@ command_not_found_handler() {
     ];
 
 #    theme = "robbyrussell";
-    theme = "powerlevel10k/powerlevel10k";
+    theme = "";
   };
 
   home.shell.enableZshIntegration = true;

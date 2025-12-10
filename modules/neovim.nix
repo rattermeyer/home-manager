@@ -47,7 +47,6 @@ in
     plugins.nvim-surround.enable = true;
     plugins.airline.enable = true;
     plugins.neo-tree.enable = true;
-    plugins.yazi.enable = true;
 
   };
 }
